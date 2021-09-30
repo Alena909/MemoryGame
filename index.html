@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Memory Game</h1>
+        <p>Find matching fruit</p>
+    </header>
+
+    <main>
+        <div class="score">
+            <h2>Number of Tries Left: <span id="currentTries"></span></h2>
+            <h2>Score: <span id="currentScore"></span> out of 12</h2>
+            <p class="score_display"></p>
+        </div>
+        <div id="deck" class="container card_view">
+
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front"></div>
+                    <div class="card__face card__face--back "></div>
+                </div>
+            </div>
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front"></div>
+                    <div class="card__face card__face--back "></div>
+                </div>
+            </div>
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front"></div>
+                    <div class="card__face card__face--back "></div>
+                </div>
+            </div>
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front"></div>
+                    <div class="card__face card__face--back "></div>
+                </div>
+            </div>
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front"></div>
+                    <div class="card__face card__face--back "></div>
+                </div>
+            </div>
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front"></div>
+                    <div class="card__face card__face--back "></div>
+                </div>
+            </div>
+
+
+
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front"></div>
+                    <div class="card__face card__face--back "></div>
+                </div>
+            </div>
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front"></div>
+                    <div class="card__face card__face--back "></div>
+                </div>
+            </div>
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front"></div>
+                    <div class="card__face card__face--back "></div>
+                </div>
+            </div>
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front"></div>
+                    <div class="card__face card__face--back "></div>
+                </div>
+            </div>
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front"></div>
+                    <div class="card__face card__face--back "></div>
+                </div>
+            </div>
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front"></div>
+                    <div class="card__face card__face--back "></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="result_message" class="container result_view">
+            <div id="winner">
+                <h2>🎉 Congratulations! 🎉<br>
+                    You know all your fruit and your memory is not too bad either.
+                </h2>
+            </div>
+            <div id="loser">
+                <h2>💥 You lost this time 💥<br> Click reset to give it another shot.
+                </h2>
+            </div>
+        </div>
+
+        <button id="resetBtn" type="button">Reset</button>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
