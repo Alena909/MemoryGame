@@ -10,7 +10,11 @@
 body {
   text-align: center;
   margin: 1rem auto;
-  background-color: rgb(248, 248, 83);
+  background-image: linear-gradient(
+    to top left,
+    rgb(173, 129, 190) 0%,
+    rgb(178, 109, 206) 100%
+  );
   color: #333;
   font-family: "Original Surfer", cursive;
   width: 700px;
@@ -26,7 +30,7 @@ h1 {
 .score {
   line-height: 0.5rem;
   font-size: small;
-  color: rgb(85, 83, 83);
+  background-color: rgb(191, 156, 204);
   border: 1px dashed;
   width: 50%;
   margin: 0.5rem auto;
@@ -118,30 +122,48 @@ h1 {
 .result_view {
   text-align: center;
   margin: auto auto;
+  box-shadow: 2px 3px 20px #333;
 }
 #winner {
-  background-color: rgb(30, 243, 131);
+  background-color: rgb(114, 180, 145);
   padding: 0.7rem;
   color: black;
   margin: 3rem auto;
+  border: 2px solid #333;
+  border-radius: 3px;
 }
 #loser {
   background-color: rgb(226 56 42);
   padding: 0.7rem;
   color: black;
   margin: 3rem auto;
+  border: 2px solid #333;
+  border-radius: 3px;
 }
 
 button {
   margin: 0.2rem auto;
   padding: 0.5rem 1rem;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  color: #333;
   border-radius: 0.3rem;
-  background-color: rgb(143, 141, 141);
+
+  background-color: rgb(198, 185, 211);
   cursor: pointer;
   font-weight: bold;
   font-family: "Original Surfer", cursive;
-  text-shadow: white 3px 3px 10px;
+  letter-spacing: 0.07rem;
+}
+
+button:active {
+  transform: translate(-5%, 2px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  background-color: rgb(112, 66, 112);
+  color: white;
+}
+button:hover {
+  background-color: rgb(112, 66, 112);
+  color: white;
 }
 
 @media screen and (max-width: 600px) {
