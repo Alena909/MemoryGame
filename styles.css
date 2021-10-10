@@ -161,7 +161,13 @@ button:active {
   background-color: rgb(112, 66, 112);
   color: white;
 }
+
 button:hover {
+  background-color: rgb(112, 66, 112);
+  color: white;
+}
+
+button.clicked {
   background-color: rgb(112, 66, 112);
   color: white;
 }

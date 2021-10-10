@@ -36,14 +36,22 @@ let drawnCards = null;
 
 const easyLevel = function () {
   difficulty = "Easy";
+  $("#medium,#hard").removeClass("clicked");
+  $("#easy").addClass("clicked");
+
   resetGame();
 };
 const mediumLevel = function () {
   difficulty = "Medium";
+  $("#easy,#hard").removeClass("clicked");
+  $("#medium").addClass("clicked");
   resetGame();
 };
 const hardLevel = function () {
   difficulty = "Hard";
+  $("#easy,#medium").removeClass("clicked");
+  $("#hard").addClass("clicked");
+
   resetGame();
 };
 
