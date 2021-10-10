@@ -1,5 +1,10 @@
 "use strict";
 // Variables
+const maxEasyTries = 9;
+const maxMediumTries = 7;
+const maxHardTries = 5;
+let difficulty = "Easy";
+
 let cardImages = ["apple", "peach", "plum", "strawberry", "banana", "cherry"];
 let selectedCards = {
   card1: null,
@@ -7,7 +12,7 @@ let selectedCards = {
   mustWait: false,
 };
 let scoreboard = {
-  triesLeft: 7,
+  triesLeft: maxEasyTries,
   score: 0,
   wonGame: false,
   lostGame: false,
@@ -28,6 +33,19 @@ let cards = [
   "cherry",
 ];
 let drawnCards = null;
+
+const easyLevel = function () {
+  difficulty = "Easy";
+  resetGame();
+};
+const mediumLevel = function () {
+  difficulty = "Medium";
+  resetGame();
+};
+const hardLevel = function () {
+  difficulty = "Hard";
+  resetGame();
+};
 
 // Function to check if selected cards match
 function isMatch() {
@@ -217,12 +235,22 @@ function resetGame() {
     // Reset all the value to starting point
     shuffleCards();
     scoreboard.score = 0;
-    scoreboard.triesLeft = 7;
     scoreboard.wonGame = false;
     scoreboard.lostGame = false;
     selectedCards.card1 = null;
     selectedCards.card2 = null;
     selectedCards.mustWait = false;
+
+    if (difficulty === "Easy") {
+      scoreboard.triesLeft = maxEasyTries;
+    } else if (difficulty === "Medium") {
+      scoreboard.triesLeft = maxMediumTries;
+    } else if (difficulty === "Hard") {
+      scoreboard.triesLeft = maxHardTries;
+    } else {
+      alert("Select difficulty level");
+    }
+
     $(".scene").show();
     assignCardImages();
     updateScoreBoard();
@@ -233,6 +261,9 @@ function resetGame() {
 $(function () {
   drawnCards = $(".card");
   drawnCards.on("click", cardClickHandler);
+  $("#easy").on("click", easyLevel);
+  $("#medium").on("click", mediumLevel);
+  $("#hard").on("click", hardLevel);
   $("#resetBtn").on("click", resetGame);
-  resetGame();
+  // resetGame();
 });
