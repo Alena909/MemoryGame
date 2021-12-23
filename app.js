@@ -35,6 +35,7 @@ let cards = [
 let drawnCards = null;
 
 const easyLevel = function () {
+  $("#deck").removeClass("hidden");
   difficulty = "Easy";
   $("#medium,#hard").removeClass("clicked");
   $("#easy").addClass("clicked");
@@ -42,12 +43,14 @@ const easyLevel = function () {
   resetGame();
 };
 const mediumLevel = function () {
+  $("#deck").removeClass("hidden");
   difficulty = "Medium";
   $("#easy,#hard").removeClass("clicked");
   $("#medium").addClass("clicked");
   resetGame();
 };
 const hardLevel = function () {
+  $("#deck").removeClass("hidden");
   difficulty = "Hard";
   $("#easy,#medium").removeClass("clicked");
   $("#hard").addClass("clicked");
@@ -267,6 +270,7 @@ function resetGame() {
 
 // Runs when the page is loaded
 $(function () {
+  $("#deck").addClass("hidden");
   drawnCards = $(".card");
   drawnCards.on("click", cardClickHandler);
   $("#easy").on("click", easyLevel);

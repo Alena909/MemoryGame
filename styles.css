@@ -42,6 +42,9 @@ h1 {
   align-content: space-evenly;
   justify-items: center;
 }
+#deck.hidden {
+  display: none;
+}
 
 .scene {
   margin: 0 auto;
